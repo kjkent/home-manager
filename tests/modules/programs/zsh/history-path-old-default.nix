@@ -8,7 +8,8 @@
     programs.zsh.enable = true;
 
     nmt.script = ''
-      assertFileRegex home-files/.zshrc '^HISTFILE="$HOME/.zsh_history"$'
+      assertFileRegex home-files/.zshrc \
+        '^HISTFILE="${config.home.homeDirectory}/.zsh_history"$'
     '';
   };
 }
